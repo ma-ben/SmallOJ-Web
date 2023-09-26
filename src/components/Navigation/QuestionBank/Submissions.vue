@@ -41,14 +41,14 @@ export default {
             "problemName": "A+B 2",
             "testcaseCount": 1,
             "passCount": 1,
-            "id": 1706630651007058000
+            "id": "1706630651007057921"
         },
         {
             "username": "Lird2002",
             "problemName": "A+B 2",
             "testcaseCount": 2,
             "passCount": 2,
-            "id": 1706660088029184000
+            "id": "1706660088029184002"
         }
     ]
 }
