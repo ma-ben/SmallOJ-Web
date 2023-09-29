@@ -20,7 +20,12 @@
 </template>
 
 <script>
-export default {
+import { useCookies } from 'vue3-cookies';
+export default { 
+  setup() {
+    const { cookies } = useCookies();
+    return { cookies };
+  },
   data() {
     return {
       selectedMode:'main',
@@ -49,10 +54,11 @@ export default {
         id: this.token,
       })
         .then(response => {
-          this.userName = response.data.username;
+          this.userName = this.cookies.get("username");
         })
         .catch(error => {
           console.error(error);
+          this.userName = this.cookies.get("username");
         });
     }
   }

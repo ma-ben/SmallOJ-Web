@@ -47,10 +47,10 @@ export default {
                 window.alert('题目不能为空');
                 return;
             }
-            this.$api.post("/api/problem/"+userid+'/testcase',{
-                number: this.number,
+            this.$api.post("/api/problem/"+this.number+'/testcase',{
+                type: "1",
                 input: this.input,
-                output: this.output,
+                ans: this.output,
             })
                 .then(response => {
                     console.log(response.data);

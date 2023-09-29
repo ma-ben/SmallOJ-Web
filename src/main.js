@@ -9,7 +9,7 @@ import 'element-plus/dist/index.css'
 import VueCookies from 'vue3-cookies'
 // import vue_markdown from 'vue-markdown';
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:4523/m1/3227171-0-default',
+  baseURL: 'http://app',
 });
 
 

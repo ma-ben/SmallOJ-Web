@@ -11,6 +11,7 @@ import {marked} from 'marked';
 export default {
      computed: {
         markdownToHtml() {
+            // console.log(this.description);
             return marked(this.description);
         },
     },
@@ -30,7 +31,7 @@ export default {
 
         this.$api.get('/api/problem/'+this.itemID+'/md')
             .then(response => {
-                this.description = response.data
+                this.description = response.data.md;
             })
             .catch(error => {
                 console.error(error);

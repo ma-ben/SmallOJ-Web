@@ -5,9 +5,9 @@
         <div>
             <label for="levelSelect" style="color: white;">题目难度：</label>
           <select id="levelSelect" v-model="level">
-            <option value= '0' >easy</option>
-            <option value= '1' >normal</option>
-            <option value= '2' >hard</option>
+            <option value= 'easy' >easy</option>
+            <option value= 'normal' >normal</option>
+            <option value= 'hard' >hard</option>
           </select>
         </div><br>
         <!-- 题目名字-->
@@ -38,7 +38,7 @@ import { useCookies } from 'vue3-cookies';
     data() {
       return {
         name:'',
-        level: '0',
+        level: 'easy',
         question: '', // 代码输入框的默认值
       };
     },
