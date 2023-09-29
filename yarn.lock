@@ -1206,6 +1206,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"highlight.js@npm:^11.8.0":
+  version: 11.8.0
+  resolution: "highlight.js@npm:11.8.0"
+  checksum: d2578a57aee7315946ff19379053fd0a28b127baabf7617ab1d28d62cdc4eaf3d75053569cb8479a5afdc7a68f1ba9a6c1d612d8ae399b4b9aa43093b4fb6831
+  languageName: node
+  linkType: hard
+
 "highlight.js@npm:^9.12.0":
   version: 9.18.5
   resolution: "highlight.js@npm:9.18.5"
@@ -1543,6 +1550,15 @@ __metadata:
   bin:
     markdown-it: bin/markdown-it.js
   checksum: ee75f2f60491e7dad7a1d98c1512b84307207fad8494f1185a5b90d82b531ccde09c486b39c1a17e72a4a9dba283d37b6c211065d765a45f6f99c6ed8d837d85
+  languageName: node
+  linkType: hard
+
+"marked-highlight@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "marked-highlight@npm:2.0.6"
+  peerDependencies:
+    marked: ">=4 <10"
+  checksum: fbf52bf3dc22f03e3018df9ae8bd873b4dba653677adbb7172c56c0627e4432bc21ea94c1256fbfa1c29fef09aa998d164567287617c1a12e2ec652385d73833
   languageName: node
   linkType: hard
 
@@ -2344,7 +2360,9 @@ __metadata:
     axios: ^1.5.0
     element-plus: ^2.3.12
     element-ui: ^2.15.14
+    highlight.js: ^11.8.0
     marked: ^9.0.3
+    marked-highlight: ^2.0.6
     vite: ^4.4.5
     vue: ^3.3.4
     vue-markdown: ^2.2.4

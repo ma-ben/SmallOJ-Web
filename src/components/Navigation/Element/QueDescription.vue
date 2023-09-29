@@ -3,17 +3,29 @@
         Question{{ itemID  }}
     </h1>
     <div v-html="markdownToHtml"></div>
+    
 </template>
 
 <script>
-import {marked} from 'marked';
+import hljs from 'highlight.js';
+import {markedHighlight} from "marked-highlight";
+import {Marked} from "marked";
 
 export default {
      computed: {
         markdownToHtml() {
-            // console.log(this.description);
-            return marked(this.description);
+            const marked = new Marked(
+                markedHighlight({
+                    langPrefix: 'hljs language-',
+                    highlight(code, lang) {
+                        const language = hljs.getLanguage(lang)?lang:"plaintext";
+                        return hljs.highlight(code, {language}).value;
+                    }
+                })
+            )
+            return marked.parse(this.description);
         },
+        
     },
     data() {
         return {
@@ -37,6 +49,7 @@ export default {
                 console.error(error);
             });
     },
+    
     methods: {
         getCookie(name) {
             const cookieValue = document.cookie
