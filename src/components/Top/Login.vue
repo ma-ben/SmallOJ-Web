@@ -58,6 +58,7 @@ export default {
 
             console.log(response.data);
             this.cookies.set("userid", response.data.id);
+            this.cookies.set("username", this.username.trim());
             if (response.data.status_code === "Success") {
               window.alert('登录成功');
             } else {

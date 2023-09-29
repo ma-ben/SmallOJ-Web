@@ -20,7 +20,12 @@
 </template>
 
 <script>
+import { useCookies } from 'vue3-cookies';
 export default {
+  setup() {
+    const { cookies } = useCookies();
+    return { cookies };
+  },
   data() {
     return {
       selectedMode:'main',
@@ -41,20 +46,21 @@ export default {
     },
   },
   mounted: function () {
-    this.token = localStorage.getItem('token');
-    console.log(this.token);
-    if (this.token) {
-      this.flag = 1;
-      this.$api.get('/api/user/'+this.token, {
-        id: this.token,
-      })
-        .then(response => {
-          this.userName = response.data.username;
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    }
+    // this.token = localStorage.getItem('token');
+    this.userName = this.cookies.get("username");
+    // console.log(this.token);
+    // if (this.token) {
+    //   this.flag = 1;
+    //   this.$api.get('/api/user/'+this.token, {
+    //     id: this.token,
+    //   })
+    //     .then(response => {
+    //       this.userName = response.data.username;
+    //     })
+    //     .catch(error => {
+    //       console.error(error);
+    //     });
+    // }
   }
 };
 </script>
