@@ -56,7 +56,7 @@ import { useCookies } from 'vue3-cookies';
         this.$api.post("/api/problem/",{
           name: this.name,
           level: this.level,
-          question: this.question,
+          markdown: this.question,
         })
         .then(response => {
           console.log(response.data);
